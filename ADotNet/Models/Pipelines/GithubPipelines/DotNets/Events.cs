@@ -10,9 +10,10 @@ namespace ADotNet.Models.Pipelines.GithubPipelines.DotNets
 {
     public class Events
     {
+        [YamlMember(Description = "the workflow will be triggered when you push to this branch")]
         public PushEvent Push { get; set; }
 
-        [YamlMember(Alias = "pull_request")]
+        [YamlMember(Alias = "pull_request", Description = "the workflow will be triggered when you make a PR to this branch")]
         public PullRequestEvent PullRequest { get; set; }
     }
 }

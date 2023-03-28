@@ -13,8 +13,8 @@ namespace ADotNet.Models.Pipelines.GithubPipelines.DotNets
 {
     public class BuildJob
     {
-        [YamlMember(Alias = "runs-on")]
-        public string RunsOn { get; set; }
+        [YamlMember(Alias = "runs-on", Description = "server tags")]
+        public IEnumerable<string> RunsOn { get; set; }
 
         [DefaultValue(0)]
         [YamlMember(Alias = "timeout-minutes", DefaultValuesHandling = DefaultValuesHandling.OmitDefaults)]
