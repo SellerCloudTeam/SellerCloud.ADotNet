@@ -26,7 +26,7 @@ pipeline {
 						Get-ChildItem -Path "${env:workspace}/" -Filter *.nupkg -Recurse | foreach {
 							$file = $_
 							write-host "Pushing $file to nuget server"
-							nuget push "$file" $TOKEN -Source "https://nuget.sellercloud.com/v3/index.json"
+							nuget push $file ${env:TOKEN} -Source "https://nuget.sellercloud.com/v3/index.json"
 						}
 					''')
 				}
