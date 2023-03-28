@@ -6,7 +6,7 @@
 		<Description>ADotNet is a dot net library to help engineers develop their build and release pipelines in C# without having to use YAML or any other technology.</Description>
 		<Authors>Hassan Habib &amp; Shri Humrudha</Authors>
 		<PackageIcon>ADotNet.png</PackageIcon>
-		<RepositoryUrl>https://github.com/hassanhabib/ADotNet</RepositoryUrl>
+		<RepositoryUrl>https://github.com/SellerCloudTeam/SellerCloud.ADotNet</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>ADO YAML AzureDevOps</PackageTags>
 		<PackageReleaseNotes>Add Windows-Latest VM + RunTask + Environment Variables</PackageReleaseNotes>
@@ -16,7 +16,8 @@
 		<Version>2.1.1</Version>
 		<PackageLicenseFile>License.txt</PackageLicenseFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-		<PackageProjectUrl>https://github.com/hassanhabib/ADotNet</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/SellerCloudTeam/SellerCloud.ADotNet</PackageProjectUrl>
+		<PackageIconUrl>https://cdn.sellercloud.com/v1/nuget/adotnet/logo_64.png</PackageIconUrl>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
