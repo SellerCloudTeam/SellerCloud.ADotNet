@@ -13,8 +13,9 @@ pipeline {
 			steps {
 			pwsh ('''
 					nuget restore "${env:workspace}/ADotNet.sln"
+					$buildVersion = "1.0.0.${env:BUILD_NUMBER}"
+					dotnet build "${env:workspace}/ADotNet.sln --no-restore --configuration Release -property:Version=$buildVersion -property:PackageVersion=$buildVersion -property:AssemblyVersion=$buildVersion
 				''')
-				bat "\"${tool 'MSBuild 17'}/msbuild.exe\" \"${env:workspace}/ADotNet.sln\" /clp:ErrorsOnly -t:build -property:Configuration=Release -property:Version=$buildVersion -property:PackageVersion=$buildVersion -property:AssemblyVersion=$buildVersion"
 			}
 		}
 		
