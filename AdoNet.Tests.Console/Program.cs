@@ -132,7 +132,7 @@ namespace ADotNet.Tests.Console
                 {
                     Build = new BuildJob
                     {
-                        RunsOn = BuildMachines.WindowsLatest,
+                        RunsOn = new[] { BuildMachines.WindowsLatest },
 
                         EnvironmentVariables = new Dictionary<string, string>
                         {
