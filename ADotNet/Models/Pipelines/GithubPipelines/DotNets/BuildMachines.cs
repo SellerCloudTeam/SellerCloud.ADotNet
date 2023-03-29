@@ -6,6 +6,8 @@
 
 namespace ADotNet.Models.Pipelines.GithubPipelines.DotNets
 {
+    // more servers here
+    // https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
     public struct BuildMachines
     {
         public const string UbuntuLatest = "ubuntu-latest";

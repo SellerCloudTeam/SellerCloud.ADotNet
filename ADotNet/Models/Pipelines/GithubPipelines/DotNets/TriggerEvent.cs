@@ -4,19 +4,17 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------------------
 
+using YamlDotNet.Core;
 using YamlDotNet.Serialization;
 
 namespace ADotNet.Models.Pipelines.GithubPipelines.DotNets
 {
-    public class GithubPipeline
+    public class TriggerEvent
     {
-        public string Name { get; set; }
+        [YamlMember(ScalarStyle = ScalarStyle.Folded, Description = "Actions towards those branches will trigger the workflow")]
+        public string[] Branches { get; set; }
 
-        [YamlMember(Alias = "on")]
-        public Events OnEvents { get; set; }
-
-        public Concurrency Concurrency { get; set; }
-
-        public Jobs Jobs { get; set; }
+        [YamlMember(ScalarStyle = ScalarStyle.Folded, Description = "Which files should trigger the workflow")]
+        public string[] Paths { get; set; }
     }
 }
