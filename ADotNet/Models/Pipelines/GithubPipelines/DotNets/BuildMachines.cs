@@ -6,11 +6,13 @@
 
 namespace ADotNet.Models.Pipelines.GithubPipelines.DotNets
 {
+    // more servers here
+    // https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
     public struct BuildMachines
     {
-        public const string UbuntuLatest = "ubuntu-latest";
-        public const string Windows2019 = "windows-2019";
-        public const string Windows2022 = "windows-2022";
+        public const string UbuntuLatest  = "ubuntu-latest";
+        public const string Windows2019   = "windows-2019";
+        public const string Windows2022   = "windows-2022";
         public const string WindowsLatest = "windows-latest";
     }
 }

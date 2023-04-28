@@ -15,6 +15,9 @@ namespace ADotNet.Models.Pipelines.GithubPipelines.DotNets
         [YamlMember(Alias = "on")]
         public Events OnEvents { get; set; }
 
+        [YamlMember(DefaultValuesHandling = DefaultValuesHandling.OmitNull)]
+        public Concurrency Concurrency { get; set; }
+
         public Jobs Jobs { get; set; }
     }
 }

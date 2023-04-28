@@ -4,7 +4,17 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------------------
 
+using YamlDotNet.Serialization;
+
 namespace ADotNet.Models.Pipelines.GithubPipelines.DotNets
 {
-    public class PushEvent : TriggerEvent { }
+    // more here
+    // https://ashishb.net/tech/common-pitfalls-of-github-actions/
+    public class Concurrency
+    {
+        public string Group { get; set; } = "${{ github.workflow }}-${{ github.ref }}";
+
+        [YamlMember(Alias = "cancel-in-progress")]
+        public bool CancelInProgress { get; set; } = true;
+    }
 }
