@@ -11,8 +11,11 @@ using YamlDotNet.Serialization;
 
 namespace ADotNet.Models.Pipelines.GithubPipelines.DotNets
 {
-    public class BuildJob
+    public class BaseJob
     {
+        [YamlMember(Alias = "name", Description = "name of the job, it is used as label in other places")]
+        public string Name { get; set; }
+
         [YamlMember(Alias = "runs-on", Description = "server tags")]
         public IEnumerable<string> RunsOn { get; set; }
 
@@ -25,4 +28,8 @@ namespace ADotNet.Models.Pipelines.GithubPipelines.DotNets
 
         public List<GithubTask> Steps { get; set; }
     }
+
+    public class BuildJob : BaseJob { }
+
+    public class TestJob : BaseJob { }
 }
