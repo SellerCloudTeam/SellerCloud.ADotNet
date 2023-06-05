@@ -31,5 +31,9 @@ namespace ADotNet.Models.Pipelines.GithubPipelines.DotNets
 
     public class BuildJob : BaseJob { }
 
-    public class TestJob : BaseJob { }
+    public class TestJob : BaseJob
+    {
+        [YamlMember(Alias = "needs", Description = "Declares which jobs have to be ready before this one")]
+        public string Needs { get; set; }
+    }
 }
