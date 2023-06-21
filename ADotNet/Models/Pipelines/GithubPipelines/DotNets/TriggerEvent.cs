@@ -20,5 +20,12 @@ namespace ADotNet.Models.Pipelines.GithubPipelines.DotNets
             DefaultValuesHandling = DefaultValuesHandling.OmitEmptyCollections,
             Description = "Which files should trigger the workflow")]
         public string[] Paths { get; set; } = Array.Empty<string>();
+
+        [YamlMember(
+            Alias = "paths-ignore",
+            ScalarStyle = ScalarStyle.Folded,
+            DefaultValuesHandling = DefaultValuesHandling.OmitEmptyCollections,
+            Description = "Which files should NOT trigger the workflow")]
+        public string[] PathsIgnore { get; set; }
     }
 }
