@@ -26,6 +26,6 @@ namespace ADotNet.Models.Pipelines.GithubPipelines.DotNets
             ScalarStyle = ScalarStyle.Folded,
             DefaultValuesHandling = DefaultValuesHandling.OmitEmptyCollections,
             Description = "Which files should NOT trigger the workflow")]
-        public string[] PathsIgnore { get; set; }
+        public string[] PathsIgnore { get; set; } = Array.Empty<string>();
     }
 }

@@ -1,0 +1,22 @@
+<Project>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<IncludeSymbols>true</IncludeSymbols>
+		<RepositoryUrl>https://github.com/SellerCloudTeam/SellerCloud.ADotNet.git</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/SellerCloudTeam/SellerCloud.ADotNet</PackageProjectUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Supernova.Enum.Generators" Version="1.0.13" />
+	</ItemGroup>
+</Project>
