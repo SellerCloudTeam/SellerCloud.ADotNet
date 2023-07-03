@@ -33,7 +33,7 @@ namespace ADotNet.Models.Pipelines.GithubPipelines.DotNets
 
     public class TestJob : BaseJob
     {
-        [YamlMember(Alias = "needs", Description = "Declares which jobs have to be ready before this one")]
+        [YamlMember(Alias = "needs", DefaultValuesHandling = DefaultValuesHandling.OmitNull, Description = "Declares which jobs have to be ready before this one")]
         public string Needs { get; set; }
     }
 }
